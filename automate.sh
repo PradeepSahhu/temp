@@ -17,8 +17,6 @@ elif [[ option -eq 3 ]]; then
     read githubRepoLink
     git add .
     if [[ $? -ne 0 ]]; then
-        echo "Enter the github repo Link"
-        read githubRepoLink
         git init
         git branch -M main
         git remote add origin "$githubRepoLink"
