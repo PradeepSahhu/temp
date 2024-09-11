@@ -15,6 +15,8 @@ elif [[ option -eq 2 ]]; then
 elif [[ option -eq 3 ]]; then
     echo -e "Enter the github repo link"
     read githubRepoLink
+    echo -e "Enter the commit message"
+    read githubcommit
     git add .
     if [[ $? -ne 0 ]]; then
         git init
@@ -23,6 +25,6 @@ elif [[ option -eq 3 ]]; then
         git add .
     fi
     git add .
-    git commit -m "$1"
+    git commit -m "$githubcommit"
     git push -u origin main
 fi
